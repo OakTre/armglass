@@ -1,0 +1,53 @@
+- let footerNavItems = ["О компании", "Каталог", "Калькулятор", "Документы", "Блог", "Контакты"]
+- let footerNavItems2 = ["Композитная арматура", "Композитная сетка", "Изделия под заказ"]
+
+footer.footer
+	.site-container
+		.footer__inner
+			.footer__top
+				.footer__top_col
+					.footer__logo
+						a(class="footer__logo_link", href="#")
+							img(src="./img/logo.png", alt="Логотип")
+							p
+								| Федеральный производитель композитных изделий
+								br
+								| для строительной отрасли РФ
+				.footer__top_col
+					.footer__nav_row
+						nav.footer__nav.footer__nav-top
+							ul
+								each val in footerNavItems
+									li
+										a(href="#")= val
+					.footer__nav_row
+						nav.footer__nav.footer__nav-bottom
+							ul
+								each val in footerNavItems2
+									li
+										a(href="#")= val
+				.footer__top_col
+					.footer__location.main_location
+						+icon("marker")
+						| г. Нижний Новгород
+
+					a(class="phone-content", href="tel:+79200663030")
+						| +7 (920) 066-30-30
+
+					button.footer__call.button-reset.main_order_call
+						+icon("call")
+						span
+							| Заказать звонок
+			.footer__bottom
+				.footer__copyright
+					p
+						|	ⓒ Все права защищены. Информация
+						br
+						|	на сайте не является публичной офертой. ИНН: 00000000000
+
+				a(class="footer__policy", href="#")
+					|	Политика конфиденциальности
+
+				a(class="b2b", href="#")
+					|	Создание сайта b2b
+

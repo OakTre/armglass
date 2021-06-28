@@ -1,0 +1,30 @@
+- let navMobValues = ['О компании', 'Каталог', 'Калькулятор', 'Документы', 'Блог', 'Контакты', 'Композитная арматура', 'Композитная сетка', 'Изделия под заказ'];
+
+.menu_mobile
+	button.button-reset.menu_mobile__button
+		span
+		span
+	.menu_mobile__inner
+		.menu_mobile__top
+			nav.menu_mobile__nav
+				ul
+					each val in navMobValues
+						li
+							a(href="#")= val
+		.menu_mobile__bottom
+			.menu_mobile__tel.js--menu-mobile-link
+				a(class="phone-content", href="tel:+79200663030")
+					| +7 (920) 066-30-30
+
+			.menu_mobile__location.main_location.js--menu-mobile-link
+				+icon("marker")
+				| г. Нижний Новгород
+
+			button.menu_mobile__call.button-reset.main_order_call.js--menu-mobile-link
+				+icon("call")
+				span
+					| Заказать звонок
+
+
+
+

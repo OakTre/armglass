@@ -1,0 +1,20 @@
+- let number = 1
+
+section.section.clients
+	.site-container
+		.clients__title
+			h2
+				| На наших материалах работают
+		.clients__list_wrap
+			.clients__list.clients__list-grid_empty
+				- for (let i=0; i<12; i++)
+					- if (i == 9 || i == 10)
+						.clients__item
+					- else
+						.clients__item
+							.clients__item_img
+								+imgLazy("img/client"+`${number++}`+".png", "Наши клиенты")
+		a(class="clients__button", href="#")
+			+icon("polygon_red")
+			+icon("polygon_white")
+			| Еще

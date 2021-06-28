@@ -1,0 +1,41 @@
+- let cadTitles = ["Композитная арматура", "Композитный профиль", "Композитная сетка", "Композитные трубы", "Фиксаторы для арматуры", "Садовые стержни", "Гибкие связи", "Гнутые элементы"]
+- let num = 0;
+
+section.section.product_categories
+	.product_categories__bg_block
+
+	.site-container
+		.product_categories__text_wrap
+			.product_categories__title
+				+icon("cat-line")
+				h2
+					span
+						| 10 категорий
+					|  строительных композитных материалов
+			.product_categories__text
+				p
+					strong
+						| Инновационный надежный продукт
+					|  – имеет одинаковый с бетоном коэффициент теплового расширения
+
+		.product_categories__list
+			each title, index in cadTitles
+				a(class="card product_categories__card", href="#")
+					.card__top
+						.card__img
+							+pictureLazy("img/card_item_img"+`${ index }`+".png")
+					.card__bottom
+						.card__bottom_text
+							h3.card__title= title
+							.card__more
+								| Подробнее
+								+icon("arrow")
+						.card__bottom_price
+							| от 8 руб./ м.п.
+
+		button.button-reset.btn.product_categories__button
+			span
+				| Смотреть весь каталог
+
+
+

@@ -1,0 +1,12 @@
+
+// include styles
+@import "./variables.scss";
+@import "include/include.scss";
+
+// blocks
+@import "blocks/menu_mobile/menu_mobile.scss";
+@import "blocks/card/card.scss";
+@import "blocks/form/form.scss";
+@import "blocks/header/header.scss";
+@import "blocks/main/main.scss";
+@import "blocks/footer/footer.scss";

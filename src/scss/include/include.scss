@@ -1,0 +1,173 @@
+@import "mixins/media.scss";
+@import "func/px-to-rem.scss";
+@import "fonts/fonts.scss";
+@import "settings/setttings.scss";
+
+
+.button-reset {
+	border: none;
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+}
+
+
+.phone-content {
+	font-weight: 700 !important;
+	color: $color-white !important;
+
+	&:hover {
+		text-shadow: 0 0 1px $color-white;
+	}
+}
+
+.main_location {
+	display: flex;
+	align-items: center;
+	font-size: rem(14px);
+
+	.icon-marker {
+		width: 14px;
+		height: 20px;
+		margin-right: 11px;
+		fill: $color-red;
+	}
+}
+
+.main_order_call {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	.icon-call {
+		width: 18px;
+		height: 17px;
+		margin-right: 16px;
+		fill: $color-red;
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+		font-size: rem(14px);
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			width: 100%;
+			height: 2px;
+			border-bottom: 1px dashed $color-dark-blue--2;
+		}
+	}
+
+	&:hover {
+		span {
+			&::before {
+				content: none;
+			}
+		}
+	}
+}
+
+.btn {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+
+	span {
+		display: inline-block;
+		padding: 28px 33px;
+		background-color: $color-red;
+		color: $color-white;
+		text-transform: uppercase;
+		font-size: rem(14px);
+		line-height: 1.3;
+		font-weight: 700;
+		transition: background-color $main-transition, transform $main-transition;
+	}
+
+	&:active {
+		span {
+			background-color: $color-red-darker;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 10px;
+		bottom: 0;
+		z-index: -1;
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		box-shadow: 20px 20px 80px $color-red;
+		opacity: 0;
+
+		transition: opacity $main-transition;
+	}
+
+	&:hover {
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+.agreement-check {
+}
+
+.agreement-label {
+	color: #606475;
+	font-size: rem(12px);
+
+	a {
+		color: $color-red;
+	}
+}
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background-color: $color-dark-blue--2;
+	transition: opacity $main-transition;
+	display: none;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__logo {
+		width: 30%;
+	}
+
+	&.preloader--loaded {
+		opacity: 0;
+	}
+}
+
+@keyframes logoAnim {
+	0% {
+		transform: translate(0,0);
+	}
+
+	50% {
+		transform: translate(-269.1%, -603.6%);
+	}
+
+	100% {
+		width: 261px;
+		height: 67px;
+	}
+}

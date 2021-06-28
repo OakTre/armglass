@@ -1,0 +1,458 @@
+.fiberglass {
+	position: relative;
+	z-index: 10;
+	padding-top: 210px;
+	margin-bottom: 112px;
+
+	&__bg_element {
+		position: absolute;
+		top: 0;
+		left: 50px;
+		height: 95%;
+		width: 100%;
+		z-index: -1;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50.6%;
+			height: 100%;
+			background-color: $color-grey;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 49.4%;
+			height: 91.7%;
+			background-color: $color-red;
+		}
+	}
+
+	&__blur_el {
+		position: absolute;
+		right: -20px;
+		bottom: 100px;
+		z-index: 200;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		box-shadow: 0 0 90px rgba($color: $color-red, $alpha: 1.0);
+
+	}
+
+	&__text_wrap {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		margin-left: auto;
+		margin-right: 286px;
+		p {
+			font-size: rem(20px);
+			line-height: 1.5;
+			max-width: 389px;
+			color: $color-white;
+			margin: 0;
+		}
+	}
+
+	&__title {
+		max-width: 532px;
+
+		h2 {
+			font-family: $second-font-family;
+			font-size: rem(48px);
+			font-weight: 400;
+			line-height: 1.2;
+			margin: 0;
+
+			span {
+				color: $color-red;
+			}
+
+			strong {
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__info {
+		position: relative;
+		max-width: 939px;
+		width: 100%;
+		padding-top: 46px;
+		padding-left: 283px;
+		padding-bottom: 94px;
+		background-color: $color-white;
+		border-radius: 0 0 24px 0;
+
+		p {
+			margin: 0;
+			max-width: 429px;
+			margin-bottom: 24px;
+			line-height: 1.5;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: -92%;
+		bottom: -233px;
+	}
+
+	&__button {
+		z-index: 50;
+		padding: 0;
+		transition: transform $main-transition;
+		margin-top: -21px;
+		span {
+			padding: 36px 74px;
+			border-radius: 0 0 20px 0;
+		}
+
+		&:hover {
+			transform: translateY(-7px);
+		}
+	}
+
+	@include _1536 {
+		padding-top: 190px;
+		&__bg_element {
+			left: 0;
+
+			&::before,
+			&::after {
+				width: 50%;
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: rem(43px);
+			}
+		}
+
+		&__text {
+			margin-right: 190px;
+		}
+
+		&__img {
+			right: -53%;
+			bottom: -112px;
+			width: 100%;
+		}
+
+		&__info {
+			padding-left: 70px;
+			padding-bottom: 64px;
+		}
+
+		&__blur_el {
+			bottom: 117px;
+		}
+	}
+
+	@include _1440 {
+		&__img {
+			right: -45%;
+		}
+	}
+
+	@include _1366 {
+		margin-bottom: 92px;
+		&__text {
+			p {
+				font-size: rem(18px);
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: rem(38px);
+			}
+		}
+
+		&__button {
+			span {
+				padding: 30px 72px;
+			}
+		}
+
+		&__info {
+			padding-left: 50px;
+			p {
+				max-width: 499px;
+			}
+		}
+
+		&__img {
+			width: 94%;
+		}
+	}
+
+	@include _1280 {
+		margin-bottom: 82px;
+		&__text_wrap {
+			justify-content: space-between;
+		}
+
+		&__text {
+			margin: 0;
+			margin-right: 100px;
+			p {
+				font-size: rem(17px);
+				max-width: 349px;
+			}
+		}
+
+		&__info {
+			padding-bottom: 54px;
+			p {
+				max-width: 519px;
+			}
+		}
+
+		&__img {
+			width: 84%;
+			right: -35%;
+		}
+	}
+
+	@include _1200 {
+		padding-top: 180px;
+		&__info {
+			padding-bottom: 144px;
+			p {
+				max-width: 759px;
+				font-size: rem(17px);
+			}
+		}
+
+		&__img {
+			width: 74%;
+			right: -10%;
+			bottom: -92px;
+		}
+
+		&__blur_el {
+			display: none;
+		}
+
+		&__button {
+			margin-top: 20px;
+		}
+	}
+
+	@include _992 {
+		padding-top: 160px;
+		&__text {
+			margin: 0;
+
+			p {
+				font-size: rem(14px);
+				max-width: 300px;
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: rem(34px);
+			}
+		}
+
+		&__img {
+			right: -4%;
+			bottom: -101px;
+		}
+	}
+
+	@include _769 {
+		margin-bottom: 62px;
+		&__text_wrap {
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: stretch;
+		}
+
+		&__title {
+			margin-bottom: 25px;
+		}
+
+		&__text {
+			p {
+				color: $color-dark-blue--1;
+				font-size: 1rem;
+				max-width: 330px;
+			}
+		}
+
+		&__info {
+			p {
+				max-width: 80%;
+				font-size: 1rem;
+			}
+		}
+
+		&__img {
+			right: -6%;
+			bottom: -91px;
+		}
+	}
+
+	@include _740 {
+		&__bg_element {
+			&::after {
+				width: 40%;
+			}
+
+			&::before {
+				width: 60%;
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: rem(32px);
+			}
+		}
+
+		&__info {
+			padding-left: 30px;
+			padding-bottom: 174px;
+		}
+
+		&__img {
+			bottom: -64px;
+			right: -4%;
+			bottom: -54px;
+		}
+
+		&__button {
+			margin-top: 0;
+		}
+
+	}
+
+	@include _500 {
+		padding-top: 140px;
+		&__img {
+			width: 91%;
+		}
+
+		&__info {
+			padding-bottom: 184px;
+		}
+
+		&__bg_element {
+			&::after {
+				width: 30%;
+			}
+
+			&::before {
+				width: 70%;
+			}
+		}
+
+		&__button {
+			span {
+				padding: 26px 72px;
+			}
+		}
+	}
+
+	@include _480 {
+		&__img {
+			width: 107%;
+		}
+
+		&__bg_element {
+			&::after {
+				width: 20%;
+			}
+
+			&::before {
+				width: 80%;
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: 1.8rem;
+			}
+		}
+
+	}
+
+	@include _375 {
+		margin-bottom: 52px;
+		&__title {
+			h2 {
+				font-size: 1.7rem;
+			}
+		}
+
+		&__img {
+			right: -13%;
+			bottom: -69px;
+			width: 127%;
+		}
+	}
+
+	@include _360 {
+		&__info {
+			padding-left: 20px;
+			padding-top: 26px;
+
+			p {
+				max-width: 94%;
+			}
+		}
+
+		&__img {
+			right: -9%;
+		}
+	}
+
+	@include _320 {
+		&__info {
+			width: auto;
+			margin-left: -100%;
+			padding-left: 100%;
+			padding-bottom: 194px;
+
+			P {
+				font-size: 0.9rem;
+			}
+		}
+
+		&__img {
+			bottom: -44px;
+			right: -5%;
+    		width: 67%;
+		}
+
+		&__text {
+			p {
+				font-size: 0.9rem;
+			}
+		}
+
+		&__button {
+			span {
+				padding: 25px 72px;
+			}
+		}
+	}
+
+}

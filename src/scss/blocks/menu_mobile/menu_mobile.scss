@@ -1,0 +1,148 @@
+.menu_mobile {
+	position: fixed;
+	top: 0;
+	right: -100%;
+	z-index: 400;
+	width: 500px;
+	height: 100%;
+	background-color: $color-white;
+
+
+	&__button {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		span {
+			position: absolute;
+			display: block;
+			width: 80%;
+			height: 4px;
+			background-color: $color-dark-blue--1;
+
+			&:nth-child(1) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				transform: rotate(-45deg);
+			}
+		}
+
+		&:active {
+			transform: scale(0.8);
+		}
+	}
+
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__top {
+		padding: 40px 80px 30px 30px;
+	}
+
+	&__nav {
+		ul {
+			display: flex;
+			flex-direction: column;
+
+			li {
+				margin-bottom: 25px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a {
+					font-size: rem(18px);
+					font-weight: 700;
+					color: $color-dark-blue--2;
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		padding: 30px 30px 74px 30px;
+		margin-top: auto;
+		border-top: 1px solid $color-dark-blue--1;
+	}
+
+	&__location {
+		font-size: rem(18px);
+		font-weight: 700;
+		margin-bottom: 24px;
+		color: $color-dark-blue--2;
+	}
+
+	&__call {
+		span {
+			font-size: rem(18px);
+			font-weight: 700;
+			color: $color-dark-blue--2;
+
+			&::before {
+				color: $color-dark-blue--2;
+			}
+		}
+	}
+
+	&__tel {
+		margin-bottom: 24px;
+
+		.phone-content {
+			font-size: rem(18px);
+			color: $color-dark-blue--2 !important;
+		}
+	}
+
+	@include _1200 {
+		overflow: hidden;
+		&__inner {
+			overflow-y: scroll;
+			overflow-x: hidden;
+			height: 100%;
+		}
+	}
+
+	@include _740 {
+		width: 100%;
+	}
+
+	@include _320 {
+		&__nav {
+			ul {
+				li {
+					a {
+						font-size: rem(16px);
+					}
+				}
+			}
+		}
+
+		.phone-content {
+			font-size: rem(16px) !important;
+		}
+
+		&__location {
+			font-size: rem(16px);
+		}
+
+		&__call {
+			span {
+				font-size: rem(16px);
+			}
+		}
+	}
+
+
+}

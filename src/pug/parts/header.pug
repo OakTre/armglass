@@ -1,0 +1,46 @@
+- let navValues1 = ['Композитная арматура', 'Композитная сетка', 'Изделия под заказ'];
+- let navValues2 = ['О компании', 'Каталог', 'Калькулятор', 'Документы', 'Блог', 'Контакты',];
+
+
+header.header
+	.site-container
+		.header__inner
+			.header__logo
+				a(class="header__logo_link", href="#")
+					img(src="./img/logo.png", alt="Логотип")
+					p
+						| Федеральный производитель композитных изделий
+						br
+						| для строительной отрасли РФ
+
+			.header__navigation
+				.header__navigation_top
+					nav.header__nav.header__nav-top
+						ul
+							each val in navValues1
+								li
+									a(href="#")= val
+
+					a(class="phone-content", href="tel:+79200663030")
+						| +7 (920) 066-30-30
+
+					button.header__burger.button-reset
+						span
+						span
+						| Меню
+
+				.header__navigation_bottom
+					nav.header__nav.header__nav-bottom
+						ul
+							each val in navValues2
+								li
+									a(href="#")= val
+
+					.header__location.main_location
+						+icon("marker")
+						| г. Нижний Новгород
+
+					button.header__call.button-reset.main_order_call
+						+icon("call")
+						span
+							| Заказать звонок

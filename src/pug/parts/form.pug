@@ -1,0 +1,28 @@
+form(action="", class="form")
+	h3.form__title
+		|	Оставьте заявку
+	p.form__text
+		|	мы перезвоним вам
+		br
+		|	и предложим выгодные
+		br
+		|	условия по оптовой покупке
+	.form__group
+		label.form__label
+			span.form__label_title
+				|	Ваше имя
+			input(type="text", name="name", placeholder="Александр", class="input form__input")
+		label.form__label
+			span.form__label_title
+				|	Ваш номер
+			input(type="tel", name="tel", placeholder="+7(000) 000-00-00", class="input form__input")
+	button.form__button.button-reset.btn
+		span
+			|	Подробнее
+	.agreement-check.form__agreement
+		input(class="agreement", name="Agreement", type="checkbox")
+		label(class="agreement-label")
+			span(class="check")
+				|	Я даю свое согласие на обработку персональных данных и соглашаюсь с
+				a(href="#")
+					|	политикой конфиденциальности

@@ -1,0 +1,579 @@
+.clients {
+	position: relative;
+	margin-bottom: 110px;
+
+	&__title {
+		margin-bottom: 68px;
+		text-align: center;
+		h2 {
+			font-family: $second-font-family;
+			font-weight: 700;
+			font-size: rem(48px);
+			color: $color-white;
+			margin: 0;
+		}
+	}
+
+	&__list_wrap {
+		overflow: hidden;
+		margin-top: -10px;
+		padding-top: 10px;
+	}
+
+	&__list {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(4, 17.9%);
+		grid-template-rows: repeat(3, 1fr);
+		border-top: 1px solid #485860;
+		border-bottom: 1px solid #485860;
+	}
+
+	&__item {
+		border-left: 1px solid #485860;
+		border-bottom: 1px solid #485860;
+		height: 218px;
+		position: relative;
+
+		&:nth-child(1) {
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				left: -100%;
+				width: 100%;
+				height: 1px;
+				background-color: #485860;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				left: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+
+		&:nth-child(2) {
+			&::before {
+				content: "";
+				position: absolute;
+				top: -6px;
+				left: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+
+		&:nth-child(3) {
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+		&:nth-child(4) {
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				right: -100%;
+				width: 100%;
+				height: 1px;
+				background-color: #485860;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+		&:nth-child(5) {
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				left: -100%;
+				width: 100%;
+				height: 1px;
+				background-color: #485860;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+		&:nth-child(6) {
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+
+		&:nth-child(7) {
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+
+		&:nth-child(10) {
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				z-index: 10;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #8196A0;
+			}
+		}
+
+		&:nth-child(8) {
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				right: -100%;
+				width: 100%;
+				height: 1px;
+				background-color: #485860;
+			}
+		}
+
+		&:nth-child(4n) {
+			border-right: 1px solid #485860;
+		}
+
+		&:nth-child(n+9) {
+			border-bottom: none;
+		}
+
+
+	}
+
+	&__item_img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: $color-white;
+
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		left: 50%;
+		bottom: 21px;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: rem(14px);
+		font-weight: 700;
+		line-height: 1.4;
+		width: 166px;
+		height: 166px;
+		color: $color-white;
+		background-color: $color-red;
+		border-radius: 50%;
+		transform: translateX(-50%);
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 19px;
+			bottom: 11px;
+			z-index: -1;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			box-shadow: 20px 20px 90px $color-red;
+			opacity: 0;
+			transition: opacity $main-transition;
+		}
+
+
+		.icon-polygon_red {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 107%;
+			height: 107%;
+			transition: transform $main-transition;
+
+			fill: $color-red;
+		}
+
+
+		.icon-polygon_white {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 90%;
+			height: 90%;
+			transition: transform $main-transition;
+
+
+			fill: $color-white;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+
+			.icon-polygon_white {
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+
+			.icon-polygon_red {
+				transform: translate(-50%, -50%) rotate(-90deg);
+			}
+		}
+	}
+
+
+	@include _1536 {
+
+		&__item {
+			height: 188px;
+		}
+
+		&__button {
+			width: 146px;
+			height: 146px;
+		}
+
+		&__item_img {
+			img {
+				display: block;
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: rem(43px);
+			}
+		}
+
+		&__list {
+			grid-template-columns: repeat(4, 17.3%);
+		}
+	}
+
+	@include _1366 {
+		&__item {
+			height: 148px;
+		}
+
+		&__item_img {
+			img {
+				width: 85%;
+			}
+		}
+
+		&__button {
+			bottom: 1px;
+			width: 136px;
+			height: 136px;
+		}
+
+		&__title {
+			margin-bottom: 58px;
+
+			h2 {
+				font-size: rem(38px);
+			}
+		}
+
+
+	}
+
+	@include _1280 {
+		margin-bottom: 82px;
+		&__list {
+			grid-template-columns: repeat(4,16.3%);
+		}
+
+		&__item {
+			height: 138px;
+		}
+
+		&__button {
+			width: 126px;
+    		height: 126px;
+		}
+	}
+
+	@include _1200 {
+		&__list {
+			grid-template-columns: repeat(4,23.3%);
+		}
+
+		&__item {
+			height: 150px;
+		}
+	}
+
+	@include _992 {
+		&__title {
+			h2 {
+				font-size: rem(34px);
+			}
+		}
+
+		&__item {
+			height: 130px;
+		}
+
+		&__button {
+			bottom: -29px;
+		}
+	}
+
+	@include _769 {
+		&__item {
+			height: 110px;
+		}
+
+		&__button {
+			bottom: -49px;
+		}
+	}
+
+	@include _740 {
+		padding-bottom: 110px;
+		&__item {
+			height: 130px;
+
+			&:nth-child(n+7) {
+				display: none;
+			}
+
+			&:nth-child(3n) {
+				border-right: 1px solid #485860;
+			}
+
+			&:nth-child(6) {
+				&::after {
+					content: none;
+				}
+			}
+
+
+			&:nth-child(n+4) {
+				border-bottom: none;
+			}
+
+			&:nth-child(3) {
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: -1px;
+					right: -100%;
+					width: 100%;
+					height: 1px;
+					background-color: #485860;
+				}
+			}
+		}
+
+		&__list {
+			grid-template-columns: repeat(3,30%);
+			grid-template-rows: repeat(2,1fr);
+		}
+
+		&__button {
+			bottom: -33px;
+		}
+	}
+
+	@include _500 {
+		&__title {
+			h2 {
+				font-size: 2rem;
+			}
+		}
+
+		&__item_img {
+			img {
+				width: 100%;
+			}
+		}
+
+		&__item {
+			height: 110px;
+		}
+
+
+		&__title {
+			margin-bottom: 40px;
+		}
+
+		&__button {
+			width: 126px;
+			height: 126px;
+			bottom: -23px;
+		}
+	}
+
+	@include _480 {
+		&__list {
+			grid-template-columns: repeat(2,50%);
+		}
+
+		&__list_wrap {
+			overflow: visible;
+		}
+
+		&__item {
+			height: 150px;
+
+			&:nth-child(2) {
+				border-right: 1px solid #485860;
+			}
+
+			&:nth-child(1) {
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: -6px;
+					left: -6px;
+					z-index: 10;
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					background-color: #8196a0;
+				}
+			}
+
+			&:nth-child(4) {
+				&::before {
+					content: none;
+				}
+			}
+
+			&:nth-child(5) {
+				&::before {
+					content: none;
+				}
+			}
+		}
+
+		&__title {
+			h2 {
+				font-size: 1.8rem;
+			}
+		}
+
+		&__button {
+			bottom: -33px;
+		}
+	}
+
+	@include _375 {
+		margin-bottom: 62px;
+		&__title {
+			h2 {
+				font-size: 1.7rem;
+			}
+		}
+
+		&__button {
+			bottom: 7px;
+		}
+	}
+
+	@include _320 {
+		margin-bottom: 42px;
+		&__item {
+			height: 130px;
+		}
+
+		&__button {
+			width: 116px;
+			height: 116px;
+		}
+	}
+
+}
